@@ -142,4 +142,4 @@ Round up to ~250GB/s
 
 ## Open Systems Interconnection (OSI) model
 
-![](/home/scry/Workspace/Github/system-design/images/osi.png)
+![](images/osi.png)
