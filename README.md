@@ -26,14 +26,15 @@ Scalability is altering the size of a system, either compressing or expanding th
 
 Capacity planning and estimation is the process of predicting the resources and infrastructure needed to support the expected workload on a system. 
 
-### Throughput (Request Per Second)
+### 1. Throughput (Request Per Second)
 
 #### Example 1
 
 Let's consider - **Temperature sensors** for a monitoring system. The system needs to measure temperature changes across a county using about **10 million sensors**. These sensors report changes **every 5 seconds**. Assuming each request from a sensor to server lasts **200 ms**, the average would be **2 million requests per second**.
 
 ```
-10 million requests / (1000ms/200ms) seconds
+# requests in 1 second = 1000ms/200ms = 5
+Requests per second =  10 million / 5 = 2 million
 ```
 
 #### Example 2
@@ -74,7 +75,7 @@ Or, to expand:
 Round up to 6k
 ```
 
-### Peak Time Throughput (Request Per Second)
+### 2. Peak Time Throughput (Request Per Second)
 
 We often have to think about Peak Times. Certain parts of the day see more traffic than usual.
 
@@ -86,7 +87,7 @@ We often have to think about Peak Times. Certain parts of the day see more traff
 Average Peak request per second = 500M / 3600 (60 minutes in seconds) = 138k
 ```
 
-### Server Requirement
+### 3. Server Requirement
 
 In **Example 1 - Temperature sensors**, the system has an average response time of 200ms and needs to handle 2M requests per second, and each application server can manage 32 workers handling 160 requests per second, we’d need around 12.5k server instances.
 
@@ -98,7 +99,7 @@ Each instance can handle then 160 request per second
 2M (average request per second) / 160 = 12.5k instances
 ```
 
-### Request Size
+### 4. Request Size
 
 For a system like **Example 1 - Temperature Sensors**, the data sent may be relatively small. Assuming data is sent in JSON  format, we can estimate the size of each field. The temperature is  reported as a float (4 bytes), the sensor ID is a UUID (16 bytes), and  we have three additional 4-byte fields. Accounting for the JSON format,  the total request body size is less than 100 bytes. Including HTTP  headers (typically between 200 to 400 bytes), we can conservatively  estimate each request size to be around 0.5KB. This is quite small.  
 
@@ -113,7 +114,7 @@ For 10 posts:
 ~191KB, round up to 200KB
 ```
 
-### Bandwidth & data in transit
+### 5. Bandwidth & data in transit
 
 #### Client to server (ingress)
 
@@ -136,3 +137,9 @@ Assuming every time timelines are rendered the server sends everything to the cl
 
 Round up to ~250GB/s
 ```
+
+
+
+## Open Systems Interconnection (OSI) model
+
+![](/home/scry/Workspace/Github/system-design/images/osi.png)
