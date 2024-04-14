@@ -223,5 +223,5 @@ Domain Name System (DNS)  is a  hierarchical and decentralised naming system use
 
 ## How DNS works
 
-![](images/dns_lookup.png)
+![](images/dns.png)
 
