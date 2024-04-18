@@ -225,3 +225,26 @@ Domain Name System (DNS)  is a  hierarchical and decentralised naming system use
 
 ![](images/dns.png)
 
+## Subdomains
+
+- Part of our main domain name.
+- Example - `blog.example.com` , `careers.example.com` etc.
+
+## DNS Caching
+
+A temporary database, maintained by a computer's operating system, that contains records of all the recent visits and attempted visits to websites and  other internet domains. 
+
+## Reverse DNS
+
+- Query for the domain name associated with a given IP address. 
+- Just opposite of DNS lookup.
+- Email servers use this to check if email came from a valid server before bringing it onto their network.
+
+
+
+# Load Balancing
+
+- Distributes and balances the incoming traffic among the servers.
+- Provides high availability, efficient utilization of servers, and high performance.
+
+![](images/load_balancer.png)
