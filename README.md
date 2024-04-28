@@ -248,3 +248,50 @@ A temporary database, maintained by a computer's operating system, that contains
 - Provides high availability, efficient utilization of servers, and high performance.
 
 ![](images/load_balancer.png)
+
+## Layer
+
+### Network layer
+
+- Routing based on IP addresses 
+- Example - dedicated hardware devices that can operate at high speed.
+
+### Application layer
+
+- Routing based on content (URLs, HTTP headers, or cookies).
+
+## Load Balancing Algorithms
+
+- **Round-robin**: Requests are distributed across the servers in a sequential or rotational manner.
+- **Weighted Round-robin**: Similar to Round-robin but uses weighted scores for servers assigned by the network administrator.
+- **Least Connections**: Requests to the server with the fewest active connections.
+- **Least Response Time**: Requests to the server selected by a formula that combines the fastest response time and fewest active connections.
+- **Least Bandwidth**: Requests to the server with the least Mbps of traffic.
+- **Hashing**: Distributes incoming requests among a set of servers based on the hash value of the source IP address. 
+
+
+
+# Clustering
+
+Group of two or more computers, or nodes, that run in parallel to achieve a common goal. 
+
+![](images/cluster.png)
+
+## Configurations
+
+### Active-Active
+
+- At least 2 nodes
+
+- Nodes actively running the same kind of service simultaneously
+
+- Main purpose is load balancing
+
+  ![](images/active-active.png)
+
+### Active-Passive
+
+- At least 2 nodes
+- First node is active, the second node is passive or on standby.
+
+![](images/active-passive.png)
