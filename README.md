@@ -295,3 +295,18 @@ Group of two or more computers, or nodes, that run in parallel to achieve a comm
 - First node is active, the second node is passive or on standby.
 
 ![](images/active-passive.png)
+
+# Caching
+
+- Local store for the data for faster retrieving. 
+- Short-term memory that has limited space but is faster and contains the most recently accessed items.
+
+![cache](images/cache.png)
+
+## Distributed Cache
+
+In the distributed cache, each node will have a part of the whole cache space, and then using the consistent hashing function each request can be routed to where the cache request could be found. 
+
+
+
+![](images/distributed_cache.png)
